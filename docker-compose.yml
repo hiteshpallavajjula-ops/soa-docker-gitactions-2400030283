@@ -5,7 +5,7 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: docker
-      POSTGRES_DB: klustudentdb
+      POSTGRES_DB: halldb
     ports:
       - "5433:5432"
     volumes:
@@ -18,7 +18,7 @@ services:
     image: hiteshpvm/docker-backend-2400030283:latest
     container_name: docker-springboot
     ports:
-      - "2025:2000"
+      - "2025:8081"
     depends_on:
       - postgresdb
     restart: on-failure

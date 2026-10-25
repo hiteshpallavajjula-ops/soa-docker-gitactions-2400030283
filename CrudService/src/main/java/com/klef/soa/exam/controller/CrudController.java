@@ -11,7 +11,7 @@ import com.klef.soa.exam.entity.Crud;
 import com.klef.soa.exam.service.CrudService;
 
 @RestController
-@CrossOrigin
+@CrossOrigin("*")
 public class CrudController {
 
     private final CrudService service;

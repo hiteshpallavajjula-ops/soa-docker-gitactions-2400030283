@@ -1,5 +1,15 @@
 # React + Vite
 
+## Backend connection
+
+The frontend uses `http://localhost:2025` by default, matching the backend port
+published by `docker-compose.yml`. For a locally running Spring Boot backend on
+port `8081`, start Vite with:
+
+```bash
+VITE_API_URL=http://localhost:8081 npm run dev
+```
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:

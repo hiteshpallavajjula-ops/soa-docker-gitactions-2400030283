@@ -1,7 +1,7 @@
 
 import { useCallback, useEffect, useState } from 'react';
 
-const API = 'http://localhost:8081';
+const API = import.meta.env.VITE_API_URL || 'http://localhost:2025';
 const emptyForm = {
   hallName: '',
   building: '',
@@ -22,7 +22,7 @@ async function request(path, options = {}) {
     });
   } catch {
     throw new Error(
-      'Cannot connect to backend. Start your Spring Boot application on port 8081.'
+      `Cannot connect to backend at ${API}. Check that the Spring Boot application is running.`
     );
   }
 
